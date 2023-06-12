@@ -1,7 +1,7 @@
 from keras.layers import *
 
 
-def composite_convolutional_layer(num_kernels: int, kernel_size: int, activation_function: str = 'relu',
+def composite_convolutional_layer(num_kernels: int, kernel_size: int | tuple[int, int], activation_function: str = 'relu',
                                   dropout_rate: float = 0.0) -> list[Conv2D, BatchNormalization, Activation, Dropout]:
     """
 
